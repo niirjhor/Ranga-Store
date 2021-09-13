@@ -1,13 +1,30 @@
+
+/* Body section style  */
 body {
   overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Title section style  */
+.title-name{
+  font-weight: 800;
+  color: rgb(9, 9, 10);
+  border: 2px solid;
+  background-color: honeydew;
+
+}
+.container-all{
+  background-color: rgb(3, 33, 90);
+  color: aliceblue;
 }
 .search-field {
   border: none;
   border-radius: 50px;
-  padding: 5px;
+  padding: 50 px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   outline: none;
 }
+
 .search-field:hover {
   outline: none;
   border: none;
@@ -24,10 +41,12 @@ body {
   padding: 10px 50px;
   border-radius: 25px;
   margin-left: 20px;
+  
 }
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 2px;
   /* border: 1px solid black; */
   text-align: center;
   width: 100%;
@@ -38,6 +57,8 @@ body {
 .single-product {
   padding: 10px;
   transition: 0.6s;
+  margin: 10px;
+  background-color: rgb(12, 12, 12);
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
@@ -60,6 +81,7 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+/* Responsiveness design part for big device device */
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -78,6 +100,8 @@ body {
     padding-right: 10px;
   }
 }
+
+/* Responsiveness design part for small device */
 @media only screen and (max-width: 468px) {
   #all-products {
     display: grid;
