@@ -11,16 +11,16 @@ const showProducts = (products) => {
   const allProducts = products.map((products) => products);
   for (const product of allProducts) {
     const image = product.image;
-    const title = product.title.slice(0, 20);
+    // const title = product.title.slice(0, 20);
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h3>${title}</h3>
+      <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
-      <p><span class="fa fa-star checked"></span> Average Rating: ${product.rating.rate}</p>
+      <p><span class="fa fa-star checked"></span> Average Rating: ${product.rating.rate}/5</p>
       <p><span class="fas fa-user-alt"></span> Total Rating: ${product.rating.count}</p>
       <h3>Price: $ ${product.price}</h3>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
